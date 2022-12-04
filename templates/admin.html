@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+<h1>welcome Admin</h1>
+<h2>Admin Dashboard</h2>
+<a href="{{ url_for("add")}}">Add new student</a><br>
+<a href="{{ url_for("add_result_page")}}">Add Result</a><br>
+<a href="{{ url_for("search_page")}}">student search</a><br>
+<a href="{{ url_for("add_attendance_page")}}">add attendance</a><br>
+<a href="{{ url_for("add_timetable_page")}}">add time table</a><br>
+<a href="{{ url_for("search_attendance_page")}}">search attendance</a>
+<a href="{{ url_for("admin_feedback_page")}}">feedback page</a>
+
+<a href="{{ url_for("login")}}">logout</a>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student database search page</title>
+</head>
+<body>
+<h1>welcome to student database search</h1>
+<h2>please enter usn for search</h2>
+    <form action = "{{ url_for("search")}}" method="post">
+    <table>
+        <tr><td>USN Number</td><td><input type="text" name="usn"></td></tr>
+        <tr><td><input type="submit" value="Submit"></td></tr>
+    </table>
+    </form>
+
+
+
+</body>
+</html>

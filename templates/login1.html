@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login page</title>
+</head>
+<body>
+<h1>login page</h1>
+    <form action = "{{ url_for("login_act")}}" method="post">
+    <table>
+        <tr><td>USN Number</td><td><input type="text" name="name"></td></tr>
+        <tr><td>Password</td><td><input type="password" name="pass"></td></tr>
+
+        <tr><td><input type="submit" value="Submit"></td></tr>
+    </table>
+    </form>
+</body>
+</html>

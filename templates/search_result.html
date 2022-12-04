@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search result page</title>
+</head>
+<body>
+<h1>Student search result for {{ dat.usn }}</h1>
+
+    <table>
+        <tr><td>Name</td><td>{{ dat.name }}</td></tr>
+        <tr><td>Branch</td><td>{{ dat.branch }}</td></tr>
+        <tr><td>Usn number</td><td>{{ dat.usn }}</td></tr>
+        <tr><td>email id</td><td>{{ dat.email }}</td></tr>
+        <tr><td>password</td><td>{{ dat.password }}</td></tr>
+        <tr><td>DOB(DDMMYYYY) </td><td>{{ dat.dob }}</td></tr>
+        <tr><td>Aadhaar number</td><td>{{ dat.adar }}</td></tr>
+        <tr><td>Father name</td><td>{{ dat.father }}</td></tr>
+        <tr><td>Semester</td><td>{{ dat.sem }}</td></tr>
+    </table>
+
+<br><a href="{{ url_for("admin")}}">back</a>
+</body>
+</html>

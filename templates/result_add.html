@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add student result</title>
+</head>
+<body>
+<h1>Add student result data</h1>
+<form action="{{ url_for("add_result")}}" method="post">
+    <table>
+        <tr><td>USN</td><td><input type="text" name="usn"></td></tr>
+        <tr><td>Name</td><td><input type="text" name="name"></td></tr>
+        <tr><td>Semester </td><td><input type="text" name="sem"></td></tr>
+        <tr><td>ANN </td><td><input type="text" name="ann"></td></tr>
+        <tr><td>NOSQL </td><td><input type="text" name="nosql"></td></tr>
+        <tr><td>AI_Platforms </td><td><input type="text" name="ai_platforms"></td></tr>
+        <tr><td>Open Elective 1 </td><td><input type="text" name="oe_1"></td></tr>
+        <tr><td>Total Marks </td><td><input type="text" name="total"></td></tr>
+        <tr><td>SGPA </td><td><input type="text" name="sgpa"></td></tr>
+        <tr><td>Status </td><td><input type="text" name="status"></td></tr>
+        <tr><td><input type="submit" value="Submit"></td></tr>
+    </table>
+
+</form>
+</body>
+</html>

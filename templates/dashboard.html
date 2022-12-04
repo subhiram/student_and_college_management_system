@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student dashboard</title>
+        <style>
+        table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+    </style>
+</head>
+<body>
+
+<h1>Welcome {{ dat.name }}</h1>
+
+<h2>Your profile</h2>
+    <table>
+        <tr><td>Name</td><td>{{ dat.name }}</td></tr>
+        <tr><td>Branch</td><td>{{ dat.branch }}</td></tr>
+        <tr><td>Usn number</td><td>{{ dat.usn }}</td></tr>
+        <tr><td>email id</td><td>{{ dat.email }}</td></tr>
+        <tr><td>password</td><td>{{ dat.password }}</td></tr>
+        <tr><td>DOB(DDMMYYYY) </td><td>{{ dat.dob }}</td></tr>
+        <tr><td>Aadhaar number</td><td>{{ dat.adar }}</td></tr>
+        <tr><td>Father name</td><td>{{ dat.father }}</td></tr>
+        <tr><td>Semester</td><td>{{ dat.sem }}</td></tr>
+    </table>
+
+<h2>Your results</h2>
+    <table>
+        <tr><td>Usn </td><td>{{ res.usn }}</td></tr>
+        <tr><td>Name </td><td>{{ res.name }}</td></tr>
+        <tr><td>Semester </td><td>{{ res.sem }}</td></tr>
+        <tr><td>Ann </td><td>{{ res.ann }}</td></tr>
+        <tr><td>Nosql </td><td>{{ res.nosql }}</td></tr>
+        <tr><td>AI_platforms </td><td>{{ res.ai_platforms }}</td></tr>
+        <tr><td>Open elective 1 </td><td>{{ res.oe_1 }}</td></tr>
+        <tr><td>Total marks</td><td>{{ res.total }}</td></tr>
+        <tr><td>SGPA </td><td>{{ res.sgpa }}</td></tr>
+        <tr><td>Status</td><td>{{ res.status }}</td></tr>
+
+    </table>
+<h3>Student feedback form</h3>
+<a href="{{ url_for("feedback_page")}}">please click here to give feedback</a>
+<h3>student attendance</h3>
+
+<table>
+    <tr>
+        <th>USN</th>
+        <th>Date</th>
+        <th>Class1</th>
+        <th>Class2</th>
+        <th>Class3</th>
+        <th>Class4</th>
+        <th>Class5</th>
+        <th>Class6</th>
+        <th>Class7</th>
+    </tr>
+    {% for i in attend %}
+        <tr>
+            <td>{{ i.usn }}</td>
+            <td>{{ i.date }}</td>
+            <td>{{ i.class1 }}</td>
+            <td>{{ i.class2 }}</td>
+            <td>{{ i.class3 }}</td>
+            <td>{{ i.class4 }}</td>
+            <td>{{ i.class5 }}</td>
+            <td>{{ i.class6 }}</td>
+            <td>{{ i.class7 }}</td>
+        </tr>
+
+    {% endfor %}
+
+</table>
+
+<h3>student time table for today</h3>
+<table>
+    <tr>
+        <th>course</th>
+        <th>sem</th>
+        <th>day</th>
+        <th>Class1</th>
+        <th>Class2</th>
+        <th>Class3</th>
+        <th>Class4</th>
+        <th>Class5</th>
+        <th>Class6</th>
+        <th>Class7</th>
+    </tr>
+    {% for i in y %}
+        <tr>
+            <td>{{ i.course }}</td>
+            <td>{{ i.sem }}</td>
+            <td>{{ i.day }}</td>
+            <td>{{ i.class1 }}</td>
+            <td>{{ i.class2 }}</td>
+            <td>{{ i.class3 }}</td>
+            <td>{{ i.class4 }}</td>
+            <td>{{ i.class5 }}</td>
+            <td>{{ i.class6 }}</td>
+            <td>{{ i.class7 }}</td>
+        </tr>
+
+    {% endfor %}
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<a href="{{ url_for("login")}}">Logout</a>
+
+</body>
+</html>

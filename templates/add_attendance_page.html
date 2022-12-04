@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add attendance page</title>
+</head>
+<body>
+<h1>please add the attendance here</h1>
+<form action="{{ url_for("add_attendance")}}" method="post">
+    <table>
+        <h4>please enter the status of the student if he is present or absent</h4>
+        <tr><td>USN </td><td><input type="text" name="course"></td></tr>
+        <tr><td>class1 </td><td><input type="text" name="c1"></td></tr>
+        <tr><td>class2 </td><td><input type="text" name="c2"></td></tr>
+        <tr><td>class3 </td><td><input type="text" name="c3"></td></tr>
+        <tr><td>class4 </td><td><input type="text" name="c4"></td></tr>
+        <tr><td>class5 </td><td><input type="text" name="c5"></td></tr>
+        <tr><td>class6 </td><td><input type="text" name="c6"></td></tr>
+        <tr><td>class7 </td><td><input type="text" name="c7"></td></tr>
+        <tr><td><input type="submit" value="Submit"></td></tr>
+    </table>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+</head>
+<body>
+<h1>registration form</h1>
+
+
+
+<form action="{{ url_for("register_m")}}" method="post">
+    <table>
+        <tr><td>Name</td><td><input type="text" name="name"></td></tr>
+        <tr><td>Branch</td><td><input type="text" name="branch"></td></tr>
+        <tr><td>Usn number</td><td><input type="text" name="usn"></td></tr>
+        <tr><td>email id</td><td><input type="text" name="email"></td></tr>
+        <tr><td>password</td><td><input type="text" name="password"></td></tr>
+        <tr><td>DOB(DDMMYYYY) </td><td><input type="text" name="dob"></td></tr>
+        <tr><td>Aadhaar number</td><td><input type="text" name="adar"></td></tr>
+        <tr><td>Father name</td><td><input type="text" name="father"></td></tr>
+        <tr><td>Semester</td><td><input type="text" name="sem"></td></tr>
+        <tr><td><input type="submit" value="Submit"></td></tr>
+    </table>
+    {{ msg }}
+
+
+</form>
+<h4>please add the result for this particular student</h4>
+</body>
+</html>

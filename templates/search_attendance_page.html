@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attendance search</title>
+</head>
+<body>
+<h1>welcome to the attendance search</h1>
+<form action="{{ url_for("search_attendance")}}" method="post">
+    <table>
+        <h4>please enter the date in mmddyyyy format</h4>
+        <tr><td>Date </td><td><input type="text" name="date"></td></tr>
+        <tr><td><input type="submit" value="Submit"></td></tr>
+    </table>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>feedback page</title>
+</head>
+<body>
+<h1>welcome to the student feedback page</h1>
+<h2>we appreciate you for giving us the feedback and a chance to improve and strive</h2>
+<form action="{{ url_for("feedback")}}" method="post">
+    <table>
+        <tr><td>USN </td><td><input type="text" name="usn"></td></tr>
+        <tr><td>Feedback</td><td><input type="text" name="feed"></td></tr>
+        <tr><td><input type="submit" value="Submit"></td></tr>
+    </table>
+</form>
+
+
+<h4>Thank you for your {{ stat }} feedback</h4>
+</body>
+</html>
